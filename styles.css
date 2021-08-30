@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: rgb(250, 250, 250);
+    font-family: arial;
+    letter-spacing: 1px;
+}
+
+.tutorial {
+    line-height: 30px;
+    font-family: Helvetica, sans-serif;
+    border: 4px solid #226d55;
+    border-radius: 10px;
+    width: 900px;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    padding: 70px;
+    letter-spacing: 0;
+    color: #34413e;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.tutorial #title {
+    font-size: 30px;
+    display: block;
+    font-weight: bold;
+    color: #212927;
+    margin-bottom: 20px;
+}
+
+.tutorial img {
+    width: 300px;
+    margin: 25px 0;
+}
+
+.tutorial #skip {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.tutorial #num {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-size: 12px;
+}
+
+.tutorial #next {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+#next:hover,
+#skip:hover {
+    color: #178a73;
+}
+
+#container {
+    /*the grid container*/
+    font-size: 0;
+    /*by this you can remove spaces between inline display element*/
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1420px;
+    border: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+canvas {
+    /*the nodes*/
+    display: inline-block;
+    border: 1px solid #d2d3d3;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #40514E;
+    color: rgb(250, 250, 250);
+}
+
+#clear_btn,
+#random_blocks_btn,
+#run_btn,
+#speed,
+a,
+.border_size_container,
+.speed_container,
+.radio_container,
+.dropdown {
+    margin-left: 50px;
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 19px;
+}
+
+.logo span:nth-child(1) {
+    font-weight: bold;
+}
+
+.logo span:nth-child(2) {
+    display: block;
+    font-size: 15px;
+}
+
+.img_logo {
+    /*the blue arrow*/
+    width: 22px;
+    margin-left: 20px;
+    display: block;
+}
+
+.dropdown img {
+    /*the little arrow*/
+    margin-left: 7px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    font-size: 15px;
+    text-align: left;
+    padding: 10px 15px;
+    color: #40514E;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content li:hover {
+    background-color: #eee;
+}
+
+#bi_btn {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#path_btn,
+#search_btn,
+#clear_btn,
+#random_blocks_btn {
+    background-color: inherit;
+    color: rgb(250, 250, 250);
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#run_btn {
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: rgb(250, 250, 250);
+    background-color: teal;
+    cursor: pointer;
+}
+
+select {
+    background-color: inherit;
+    color: white;
+    font-size: 15px;
+    padding: 2px 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    font-size: 14px;
+    color: black;
+    float: left;
+    color: #eee;
+}
+
+.info_container {
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+}
+
+.nodes_container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.nodes {
+    border: 1px solid #40514E;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+    margin: 0 5px 0 50px;
+}
+
+.start_node {
+    border-radius: 100%;
+    border: none;
+    background-image: radial-gradient(black, grey, #eee);
+}
+
+.target_node {
+    border-radius: 100%;
+    border: none;
+    background-image: radial-gradient(#fff, grey, black);
+}
+
+.path_node {
+    /* border-radius: 100%;*/
+    border: none;
+    background-color: red;
+}
+
+.block_node {
+    background-color: #222831;
+}
+
+.visited_node {
+    background-color: rgba(0, 190, 218, 0.75);
+}
+
+.node_visited {
+    animation-name: visitedNodeAnimation;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.pathNodeAnimation {
+    /* border-radius: 100% !important; */
+    animation-name: pathNodeAnimation;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.blockNodeAnimation {
+    border: none;
+    animation-name: blockNodeAnimation;
+    animation-duration: 150ms;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes visitedNodeAnimation {
+    0% {
+        transform: scale(0.3);
+        background-color: rgba(0, 0, 66, 0.75);
+        border-radius: 100%;
+    }
+    50% {
+        background-color: rgba(17, 104, 217, 0.75);
+    }
+    75% {
+        transform: scale(1.2);
+        background-color: rgba(0, 217, 259, 0.75);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgba(0, 190, 218, 0.75);
+    }
+}
+
+@keyframes pathNodeAnimation {
+    0% {
+        transform: scale(0.3);
+        background-color: rgba(50, 0, 0, 0.75);
+        border-radius: 100%;
+    }
+    50% {
+        background-color: rgba(100, 0, 0, 0.75);
+    }
+    75% {
+        transform: scale(1.2);
+        background-color: rgba(150, 0, 0, 0.75);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgba(255, 0, 0, 0.8);
+    }
+}
+
+@keyframes blockNodeAnimation {
+    0% {
+        transform: scale(0.3);
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 100%;
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    75% {
+        transform: scale(1.2);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}

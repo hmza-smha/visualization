@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shortest Path Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <span>ShortestPath</span><span>Visualizer</span>
+        </div>
+        <img class="img_logo" src="images/favicon.ico" alt="">
+        <div class="dropdown">
+            <button id="path_btn">ShortestPath Algorithms<img src="images/arrow.ico" alt=""></button>
+            <ul class="dropdown-content">
+                <li id="dijkstra">Dijkstra algorithm</li>
+                <li id="astar">A* algorithm</li>
+                <li id="bi_btn">Bidirectional algorithm (soon)</li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button id="search_btn">Search Algorithms<img src="images/arrow.ico" alt=""></button>
+            <ul class="dropdown-content">
+                <li id="bfs">Best-First-Search algorithm</li>
+                <li id="breadthfs">Breadth-First-Search algorithm</li>
+                <li id="dfs">Depth-First-Search algorithm</li>
+            </ul>
+        </div>
+        <button id="run_btn">RUN!</button>
+        <button id="clear_btn">Clear board</button>
+        <button id="random_blocks_btn">Random blocks</button>
+
+        <select id="speed">
+            <option value="5">speed</option>
+            <option value="15">0.25x</option>
+            <option value="10">0.5x</option>
+            <option value="5">1x (default)</option>
+            <option value="2">x2</option>
+        </select>
+        <a href="SortAlgorithms/index.html">Sort Algorithms Visualizer</a>
+    </nav>
+    <div class="nodes_container">
+        <div class="nodes start_node"></div> Start Node
+        <div class="nodes target_node"></div> Target Node
+        <div class="nodes path_node"></div> Path Node
+        <div class="nodes block_node"></div> Block Node
+        <div class="nodes visited_node"></div> Visited Node
+        <div class="nodes unvisited_node"></div> Unvisited Node
+    </div>
+    <div class="info_container">
+        <p id="algorithm_name">
+            Dijkstra algorithm!
+        </p>
+        <span id="instruction">pick a start node!</span>
+    </div>
+    <div class="tutorial">
+        <p id='content'></p>
+        <img id="tutorial_img" src="" alt="">
+        <span id="skip">skip tutorial</span>
+        <span id="num"></span>
+        <span id="next">next</span>
+    </div>
+    <!-- the grid's container -->
+    <div id="container"></div>
+    <script src="scripts/Matrix.js"></script>
+    <script src="scripts/Algorithms.js"></script>
+    <script src="scripts/Tutorial.js"></script>
+    <script src="scripts/Driver.js"></script>
+</body>
+
+</html>

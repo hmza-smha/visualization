@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Algorithms Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <p id="logo">Sort Algorithms Visualizer.</p>
+    <nav>
+        <button id="new_array">New array</button>
+        <button id="bubble_sort">Bubble sort</button>
+        <button id="insertion_sort">Insertion sort</button>
+        <button id="selection_sort">Selection sort</button>
+        <button id="quick_sort">Quick sort</button>
+        <button id="merge_sort">Merge sort</button>
+        <select name="speed" id="speed">
+                <option value="50">speed</option>
+                <option value="100">x0.5</option>
+                <option value="50">x1 (defaut)</option>
+                <option value="25">x2</option>
+                <option value="10">x3</option>
+        </select>
+        <select name="size" id="size">
+            <option value="30">size</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30 (defaut)</option>
+            <option value="40">40</option>
+        </select>
+    </nav>
+    <button id="start_btn">SORT</button>
+    <div class="container"></div>
+    <script src="scripts/Stage.js"></script>
+    <script src="scripts/Use.js"></script>
+    <script src="scripts/SortAlgorithms.js"></script>
+    <script src="scripts/Driver.js"></script>
+</body>
+
+</html>
