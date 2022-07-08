@@ -19,7 +19,6 @@ The application demo can be viewed online [HERE](https://hmza-smha.github.io/vis
 3. Routing, such as, *IP routing...*
 4. Games
 <br>
-<br>
 
 
 ## Shortest Pathfinding Algorithms
@@ -54,11 +53,11 @@ The application demo can be viewed online [HERE](https://hmza-smha.github.io/vis
 <br>
 
 <i id="notes">Notes</i>
-- **Single-Source** shortest path algorithms basically finds the shortest distance between a single node usually specified and all other nodes.
+- ```Single-Source``` shortest path algorithms basically finds the shortest distance between a single node usually specified and all other nodes.
 
-- **Single-Pair**: shortest path algorithms find the shortest distance between any pair of nodes in the graph.
+- ```Single-Pair```: shortest path algorithms find the shortest distance between any pair of nodes in the graph.
 
-- **Heuristic**:  is any approach to problem-solving that uses a practical method or various shortcuts in order to produce solutions that may not be optimal but are sufficient given a limited timeframe or deadline.
+- ```Heuristic```:  is any approach to problem-solving that uses a practical method or various shortcuts in order to produce solutions that may not be optimal but are sufficient given a limited timeframe or deadline.
 <br><br>
 
 
@@ -70,7 +69,7 @@ The control page,
 - Get random complex blocks, or draw them by yourself
 
 ---
-![image](Images//home.jpg)
+![image](images/home.jpg)
 <br>
 <br>
 
@@ -83,7 +82,7 @@ In the grid,
 - Finally, click the ```RUN``` button to see the algorithm in action.
 
 ---
-![image](Images//action.jpg)
+![image](images/action.jpg)
 <br>
 <br>
 
@@ -95,7 +94,7 @@ The control page,
 - Specify the number of the towers
 
 ---
-![image](Images//sorthome.jpg)
+![image](images/sorthome.jpg)
 <br>
 <br>
 
@@ -105,7 +104,7 @@ The control page,
 - Click ```SORT``` and enjoy!
 
 ---
-![image](Images//sortaction.jpg)
+![image](images/sortaction.jpg)
 <br>
 <br>
 
