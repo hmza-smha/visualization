@@ -69,7 +69,7 @@ The control page,
 - Get random complex blocks, or draw them by yourself
 
 ---
-![image](images/home.jpg)
+![image](images/Home.jpg)
 <br>
 <br>
 
